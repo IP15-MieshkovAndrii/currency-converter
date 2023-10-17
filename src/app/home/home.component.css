@@ -51,3 +51,35 @@
     margin-block-start: 0em;
     margin-block-end: 0em;
 }
+
+@media screen and (max-width: 700px) {
+    .home {
+        padding: 5vh 2vw;
+        margin: 15vh 5vw;
+    }
+    .amount{
+        min-height: 100px;
+        height: 20vh;
+    }
+
+    .money input {
+        font-size: 14px;
+        width: calc(100% - 10px);
+        height: 3.5vh;
+        padding-block: 5px;
+        padding-inline: 5px;
+    }
+
+
+    .money select {
+        font-size: 14px;
+        height: calc(3.5vh + 10px);
+    }
+
+    .home h1 {
+        font-size: 23px;
+    }
+}
+
+
+
