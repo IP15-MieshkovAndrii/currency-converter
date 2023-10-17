@@ -1,0 +1,22 @@
+<div class="home">
+  
+    <div class="amount">
+        <div class="money">
+            <h1>From</h1>
+            <input [(ngModel)]="amount1"(ngModelChange)="convertCurrency(1)" type="number" placeholder="Amount">
+            <select [(ngModel)]="currency1" (change)="convertCurrency(1)">
+                <option *ngFor="let rate of rates | keyvalue" [value]="rate.key">{{ rate.key }}</option>
+            </select>
+        </div>
+        
+        <div class="money">
+            <h1>To</h1>
+            <input [(ngModel)]="amount2" (ngModelChange)="convertCurrency(2)" type="number" placeholder="Amount">
+            <select [(ngModel)]="currency2" (change)="convertCurrency(1)">
+                <option *ngFor="let rate of rates | keyvalue" [value]="rate.key">{{ rate.key }}</option>
+            </select>
+        </div>
+    </div>
+    <h1>1 {{currency1}} = <span [style.color]="'green'">{{singleRate}}</span> {{currency2}}</h1>
+  
+</div>
