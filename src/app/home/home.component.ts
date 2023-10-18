@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { environment } from 'src/environments/environment';
+import { ExchangeRateService } from '../exchange-rate.service';
 interface Rates {
   [currencyCode: string]: number;
 }
@@ -22,16 +21,11 @@ export class HomeComponent implements OnInit {
     "UAH": 1,
   };
   singleRate: number = 1;
-  constructor(private http: HttpClient) { }
+
+  constructor(private exchangeRateService: ExchangeRateService) { }
 
   ngOnInit(): void {
-    this.fetchExchangeRates();
-  }
-
-  fetchExchangeRates() {
-    const apiUrl = `http://data.fixer.io/api/latest?access_key=${environment.apiKey}`;
-
-    this.http.get(apiUrl).subscribe((data: any) => {
+    this.exchangeRateService.fetchExchangeRates().subscribe((data: any) => {
       this.rates = data.rates
     });
   }
@@ -43,7 +37,6 @@ export class HomeComponent implements OnInit {
       this.amount1 = this.convert(this.amount2, this.currency2, this.currency1);
     }
   }
-
 
   convert(amount: number, fromCurrency: string, toCurrency: string): number {
     this.singleRate = parseFloat((this.rates[toCurrency] / this.rates[fromCurrency]).toFixed(5));
