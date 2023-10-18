@@ -55,6 +55,14 @@
 .exchange{
     width: 7%;
     cursor: pointer;
+    min-height: 1px;
+    aspect-ratio: 1/1;
+    border: 0.5px solid grey;
+    border-radius: 50%;
+}
+.exchange:hover{
+    background-color: rgba(255, 255, 255, 0.499);
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
 }
 
 .exchange svg {
