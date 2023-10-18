@@ -28,7 +28,7 @@
     flex-direction: column;
     height: 100%;
     justify-content: space-between;
-    width: 45%;
+    width: 40%;
 }
 
 .money input {
@@ -50,6 +50,15 @@
 .home h1 {
     margin-block-start: 0em;
     margin-block-end: 0em;
+}
+
+.exchange{
+    width: 7%;
+    cursor: pointer;
+}
+
+.exchange svg {
+    width: 100%;
 }
 
 @media screen and (max-width: 700px) {

@@ -51,4 +51,11 @@ export class HomeComponent implements OnInit {
 
     return convertation;
   }
+
+  exchangeCurrencies() {
+    const tempCurrency = this.currency1;
+    this.currency1 = this.currency2;
+    this.currency2 = tempCurrency;
+    this.convertCurrency(1);
+  }
 }
