@@ -4,8 +4,8 @@
     justify-content: space-between;
     flex-direction: column;
     align-items: center;
-    padding: 8vh 5vw;
-    margin: 6vh 15vw;
+    padding: 3em;
+    margin: 5em 13em;
     border: 0.5px solid gray;
     border-radius: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
@@ -16,7 +16,7 @@
     width: 100%;
     position: relative;
     justify-content: space-between;
-    align-items: center;
+    align-items: flex-end;
     flex-direction: row;
     min-height: 200px;
     height: 30vh;
@@ -33,18 +33,19 @@
 
 .money input {
     font-size: 16px; 
-    width: calc(100% - 20px);
+    width: calc(100% - 1.6em);
     height: 4vh;  
-    padding-block: 10px;
-    padding-inline: 10px;
+    padding-block: 0.8em;
+    padding-inline: 0.8em;
     border-radius: 5px;
     border: 0.5px solid grey;
 }
 .money select {
     font-size: 16px; 
     border-radius: 5px;
-    height: calc(4vh + 20px); 
+    height: calc(4vh + 1.6em); 
     border: 0.5px solid grey;
+    padding: 0.8em;
 }
 
 .home h1 {
@@ -59,6 +60,7 @@
     aspect-ratio: 1/1;
     border: 0.5px solid grey;
     border-radius: 50%;
+    margin-bottom:3em;
 }
 .exchange:hover{
     background-color: rgba(255, 255, 255, 0.499);
@@ -71,8 +73,7 @@
 
 @media screen and (max-width: 700px) {
     .home {
-        padding: 5vh 2vw;
-        margin: 15vh 5vw;
+        margin: 3em;
     }
     .amount{
         min-height: 100px;
@@ -81,16 +82,17 @@
 
     .money input {
         font-size: 14px;
-        width: calc(100% - 10px);
+        width: calc(100% - 1em);
         height: 3.5vh;
-        padding-block: 5px;
-        padding-inline: 5px;
+        padding-block: 0.5em;
+        padding-inline: 0.5em;
     }
 
 
     .money select {
         font-size: 14px;
-        height: calc(3.5vh + 10px);
+        height: calc(3.5vh + 1em);
+        padding: 0.5em;
     }
 
     .home h1 {
