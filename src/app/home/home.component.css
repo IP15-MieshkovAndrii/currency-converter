@@ -40,13 +40,26 @@
     border-radius: 5px;
     border: 0.5px solid grey;
 }
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type=number] {
+  appearance: textfield;
+}
 .money select {
     font-size: 16px; 
     border-radius: 5px;
     height: calc(4vh + 1.6em); 
     border: 0.5px solid grey;
-    padding: 0.8em;
+    padding: 0.7em;
+
+    margin: 0;      
+    appearance: none;
 }
+
 
 .home h1 {
     margin-block-start: 0em;

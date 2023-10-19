@@ -13,7 +13,9 @@ export class HeaderComponent implements OnInit {
   constructor(private exchangeRateService: ExchangeRateService) { }
 
   ngOnInit(): void {
-    this.usdToUahRate = parseFloat((this.exchangeRateService.rates['UAH'] / this.exchangeRateService.rates['USD']).toFixed(3));
-    this.eurToUahRate = parseFloat(this.exchangeRateService.rates['UAH'].toFixed(3));
+    this.exchangeRateService.getRates().subscribe(({ rates }) => {
+      this.usdToUahRate = parseFloat((rates['UAH'] / rates['USD']).toFixed(3));
+      this.eurToUahRate = parseFloat(rates['UAH'].toFixed(3));
+    })
   }
 }
